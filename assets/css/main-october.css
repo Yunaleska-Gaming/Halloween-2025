@@ -1,0 +1,158 @@
+body {
+    background : #0e0f11; 
+    color: #29af88
+}
+
+@font-face {
+    font-family: 'AnotherDanger';
+    src: url('../fonts/AnotherDanger.eot');
+    src: url('../fonts/AnotherDanger.eot') format('embedded-opentype'),
+         url('../fonts/AnotherDanger.woff2') format('woff2'),
+         url('../fonts/AnotherDanger.woff') format('woff'),
+         url('../fonts/AnotherDanger.ttf') format('truetype'),
+         url('../fonts/AnotherDanger.svg#AnotherDanger') format('svg');
+}
+
+@font-face {
+    font-family: 'SpookyGrave';
+    src: url('../fonts/SpookyGrave.eot');
+    src: url('../fonts/SpookyGrave.eot') format('embedded-opentype'),
+         url('../fonts/SpookyGrave.woff2') format('woff2'),
+         url('../fonts/SpookyGrave.woff') format('woff'),
+         url('../fonts/SpookyGrave.ttf') format('truetype'),
+         url('../fonts/SpookyGrave.svg#SpookyGrave') format('svg');
+}
+
+@font-face {
+    font-family: 'ResidentEvil';
+    src: url('../fonts/ResidentEvil.eot');
+    src: url('../fonts/ResidentEvil.eot') format('embedded-opentype'),
+         url('../fonts/ResidentEvil.woff2') format('woff2'),
+         url('../fonts/ResidentEvil.woff') format('woff'),
+         url('../fonts/ResidentEvil.ttf') format('truetype'),
+         url('../fonts/ResidentEvil.svg#ResidentEvil') format('svg');
+}
+
+.calendar {
+    width: 1600px;
+    height: 900px;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 60px 0;
+}
+
+#calendar-video {
+    width: 1600px;
+    height: 900px;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.evil-october {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "AnotherDanger";
+    color: #fff;
+    text-shadow:
+        5px 0 black, -5px 0 black,
+        0 5px black, 0 -5px black,
+        5px 5px black, -5px -5px black,
+        5px -5px black, -5px 5px black;
+    letter-spacing: 15px;
+    font-size : 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.halloween-year {
+    font-family: "ResidentEvil";
+    font-size: 7rem;
+}
+
+.calendar-month {
+    padding: 0;
+    margin: 0 15px 30px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.calendar-month li {
+    width: 180px;
+}
+
+.calendar-month img {
+    width: 180px;
+}
+
+.calendar-weeks {
+    display: flex;
+    gap: 35px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.calendar-days {
+    width: 180px;
+    height: 120px;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+
+.calendar-days:hover {
+    transform: scale(1.1);
+    filter: saturate(1.7);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.days-number {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    font-family: "ResidentEvil";
+    font-size : 30px;
+    width : 30px;
+    height: 30px;
+    border-radius: 45px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #54ff2a;
+    text-align: center;
+    z-index: 999;
+}
+
+.over { 
+    background-color: #54ff2a;
+    color: #000;
+    border-color: #000;
+}
+
+.live-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #9147ff;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px 4px;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 1s infinite;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+}
