@@ -131,7 +131,16 @@ body {
     z-index: 999;
 }
 
-.over { 
+.calendar-days.over img {
+  filter: grayscale(100%);
+  transition: 0.5s all ease-in-out;
+}
+
+.calendar-days.over:hover img {
+  filter: grayscale(50%);
+}
+
+.calendar-days.over .days-number { 
     background-color: #54ff2a;
     color: #000;
     border-color: #000;

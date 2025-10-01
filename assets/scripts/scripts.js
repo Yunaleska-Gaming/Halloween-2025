@@ -28,7 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Over automatique
                 if (entry.finished || (currentDay && entry.day < currentDay)) {
-                    numberDiv.classList.add("over");
+                    // Classe globale
+                    dayDiv.classList.add("over");
+
+                    // Classe spécifique jour + jeu
+                    const dayStr = String(entry.day).padStart(2, "0");
+                    dayDiv.classList.add(`over-${dayStr}-${entry.game.toLowerCase()}`);
                 }
 
                 // Position numéro
